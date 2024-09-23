@@ -1,0 +1,73 @@
+body{
+    background-image:url('bg.png');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+    padding: 0px;
+}
+
+.body{
+    margin: 0px;
+}
+
+.nav-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.menu{
+    cursor: pointer;
+    /* justify-content: end; */
+    /* display:flex; */
+    /* margin-right: 30px; */
+}
+
+.txt-home{
+    cursor: pointer;
+    margin-left: 700px;
+    color: #2d3480;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 10px;
+}
+
+
+.txt-projects, .txt-about {
+    cursor: pointer;
+    color: #2d3480;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 10px;
+}
+
+.card{
+    width: 18rem;
+}
+
+@media (max-width: 768px) {
+    .txt-home, .txt-projects, .txt-about {
+        font-size: 14px;
+        padding-top: 5px;
+    }
+    .nav-container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .txt-home, .txt-projects, .txt-about {
+        font-size: 12px;
+        padding-top: 5px;
+    }
+    .nav-container {
+        display: block;
+        text-align: center;
+    }
+}
