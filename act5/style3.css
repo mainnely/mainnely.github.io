@@ -1,0 +1,124 @@
+
+
+
+.banner {
+    background-image: url("sydney_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 100vh;
+}
+
+.banner img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+
+.nav-content {
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.txtHome,
+.txtProjects,
+.txtAbout {
+    padding: 7px;
+    font-family: 'poppins';
+}
+
+.introTitle {
+    color: aliceblue;
+    height: auto;
+    min-height: 585px;
+    font-family: 'poppins';
+}
+
+.introContent {
+    color: aliceblue;
+    max-height: 200px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'poppins';
+}
+
+.homeBtn {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.titleTxt {
+    color: aliceblue;
+    margin-bottom: 10px;
+    text-align: end;
+    font-weight: bold;
+}
+
+.contentTxt {
+    font-size: 19px;
+    max-height: 200px;
+    min-height: 200px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    max-height: 720px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    color: aliceblue !important;
+    text-shadow: 4px 4px 6px #000000;
+    font-family: 'poppins';
+}
+
+.picSlide {
+    height: auto;
+    max-height: 720px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: black;
+}
+
+.infoSlide {
+    background-color: rgb(23, 29, 37);
+    margin-top: 100px;
+    padding-top: 30px;
+    height: auto;
+    font-family: 'poppins';
+}
+
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-body {
+    max-height: 200px;
+}
+
+.btnCard {
+    height: 40px;
+    width: 120px;
+    font-size: 15px;
+    font-weight: bold;
+    padding-top: 9px;
+}
+
+.hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
