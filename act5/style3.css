@@ -106,10 +106,6 @@
     font-weight: bold;
 }
 
-.card-body {
-    max-height: 200px;
-}
-
 .btnCard {
     height: 40px;
     width: 120px;
