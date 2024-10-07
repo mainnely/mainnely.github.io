@@ -1,18 +1,9 @@
-
 .banner {
     background-image: url("sydney_bg.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     min-height: 100vh;
 }
-
-/* .banner img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-} */
-
 
 .nav-content {
     color: aliceblue;
@@ -31,14 +22,16 @@
 .introTitle {
     color: aliceblue;
     height: auto;
-    min-height: 585px;
+    min-height: 550px;
+    max-height: 550px;
     font-family: 'poppins';
+    margin-bottom: 70px;
 }
 
 .introContent {
     color: aliceblue;
-    max-height: 200px;
-    min-height: 200px;
+    max-height: 230px;
+    min-height: 230px;
     display: flex;
     align-items: center;
     justify-content: center;
