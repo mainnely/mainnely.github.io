@@ -1,19 +1,17 @@
 
-
-
 .banner {
     background-image: url("sydney_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
-.banner img {
+/* .banner img {
     display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
-}
+} */
 
 
 .nav-content {
