@@ -5,7 +5,7 @@
 }
 .container-fluid{
     background: #0D105B;  
-    height:fit-content;
+    height:100vh;
 }
 
 .nav{
