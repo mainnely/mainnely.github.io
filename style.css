@@ -3,22 +3,28 @@
     margin: 0px;
     padding: 0px;
 }
-.container-fluid{
+.banner{
     background: rgb(25, 12, 57);  
     height:100vh;
 }
 
 .nav{
     background: rgb(25, 12, 57);
-    height: 80px
+    height: 80px;
 }
 
-.txt-home, .txt-projects, .txt-about{
-    color: #A9D6E5;
+.navbar-nav{
+    color: #e0e8eb !important;
     text-align: center;
     font-weight: bold;
-
     margin-top: 25px;
+}
+
+.nav-link{
+    color: #e0e8eb !important;
+    text-align: center;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px !important;
 }
 
 .logo img{
