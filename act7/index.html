@@ -130,7 +130,7 @@
                 <h1 class="display-3">Game of Thrones Characters</h1>
             </div>
         </div>
-        <div class="row" id="cardContainer"></div>
+        <div class="row d-flex justify-content-center align-items-center" id="cardContainer"></div>
     </div>
 
     <div class="container">
@@ -182,7 +182,7 @@
                 const got = await response.json();
 
                 cardContainer.innerHTML += `
-                 <div class="col-10 col-sm-10 col-md-6 col-lg-4">
+                 <div class="col-10 col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
                 <a href="view.html?characterName=` + got.id + `">
                 <div class="card rounded-3 p-0 my-3" style="width:302px;">
                 <div class="imgContainer p-0">
