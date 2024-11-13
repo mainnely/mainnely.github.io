@@ -18,25 +18,33 @@
 
     .navbar-nav {
         color: #e0e8eb !important;
-        text-align: center;
+        text-align: end;
         font-weight: bold;
         margin-top: 25px;
     }
 
     .nav-link {
         color: #e0e8eb !important;
-        text-align: center;
+        text-align: end;
         font-weight: bold;
         padding: 0px 10px 0px 10px !important;
     }
 
     .errorMessage {
         color: #e0e8eb !important;
+        height: 80vh;
+    }
+
+    .error-image {
+        max-height: 80vh;
+        width: auto;
+        display: block;
+        padding: 0px;
     }
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-0" stlye="height: 100px;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg p-0" stlye="height: 100px;">
         <div class="container-fluid nav">
             <img src="img/Group 5.png" style="margin: 5px 0px 5px 15px;" />
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -44,31 +52,38 @@
                 <span class="navbar-toggler-icon shadow"></span>
             </button>
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mx-auto my-auto d-flex align-items center justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link navHome" aria-current="page" href="../">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navProjects" href="#">PROJECTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navAbout" href="#">ABOUT</a>
-                    </li>
-                </ul>
+                <div class="ms-auto">
+                    <ul class="navbar-nav pb-4">
+                        <li class="nav-item">
+                            <a class="nav-link navHome" aria-current="page" href="../">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navProjects" href="#">PROJECTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navAbout" href="#">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="container-fluid" style="background-color: rgb(25, 12, 57);">
+    <div class="container-fluid" style="height: 95vh; background-color: rgb(25, 12, 57);">
         <div class="row errorMessage justify-content-center">
-            <div class="col-12 col-sm-10 col-md-8 col-lg-6 text-center">
-                <div class="display-1 mt-3">Oops!</div>
-                <div class="mt-2">You found a page that doesn’t exist. Impressive.</div>
-                <img src="img/error.png" class="img-fluid mt-5 p-5" alt="Error Image">
-            </div>
+            <div class="display-1 mt-3 text-center">Oops!</div>
+            <div class="mt-2 text-center">You found a page that doesn’t exist. Impressive.</div>
+            <img src="img/error.png" class="img-fluid mt-5 error-image" alt="Error Image">
         </div>
     </div>
-    
+
+    <div class="container-fluid m-0 p-0">
+        <footer>
+            <p class="text-center m-0 pb-5" style="color:#e0e8eb; text-align: center; background: rgb(25, 12, 57);">
+                &copy; mainnely.github.io</p>
+        </footer>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
