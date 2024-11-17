@@ -12,78 +12,77 @@
 </head>
 
 <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg p-0" stlye="height: 100px;">
+        <div class="container-fluid nav m-0">
+            <img src="img/Group 5.png" style="margin: 5px 0px 5px 15px;" />
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon shadow"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <div class="ms-auto">
+                    <ul class="navbar-nav pb-4">
+                        <li class="nav-item">
+                            <a class="nav-link navHome" aria-current="page" href="../">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navProjects" href="#">PROJECTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navAbout" href="#">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="container-fluid banner">
-        <div class="row navi">
-            <div class="col-3 logo">
-                <img src="img/Group 5.png" />
-            </div>
-            <div class="col-3">
-                <div class="txt-home">
-                    HOME
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="txt-projects">
-                    PROJECTS
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="txt-about">
-                    ABOUT
-                </div>
-            </div>
-        </div>
-
         <div class="row content">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-8 center">
-                        <img src="img/ip16.png" />
-                    </div>
-                    <div class="col side" style="padding-right: 0px; padding-left: 0px;">
+            <div class="col-12 col-md-8 text-center d-flex align-items-center">
+                <img src="img/ip16.png" class="img-fluid d-flex align-items-center" alt="iPhone 16">
+            </div>            
 
-                        <ul class="nav nav-underline">
-                            <li class="nav-item">
-                                <a class="nav-link" style="color: #030419" aria-current="page" href="#"
-                                    onclick="showContent('iphone16')">iPhone 16</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="color: #030419" href="#"
-                                    onclick="showContent('iphone16Pro')">iPhone 16 Pro</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="color: #030419" href="#"
-                                    onclick="showContent('iphone16ProMax')">iPhone 16 Pro
-                                    Max</a>
-                            </li>
-                        </ul>
+            <div class="col-12 col-md-4 side p-0">
+                <ul class="nav nav-underline m-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #030419" aria-current="page" href="#"
+                            onclick="showContent('iphone16')">iPhone 16</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #030419" href="#" onclick="showContent('iphone16Pro')">iPhone
+                            16 Pro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #030419" href="#"
+                            onclick="showContent('iphone16ProMax')">iPhone 16 Pro Max</a>
+                    </li>
+                </ul>
 
-                        <div id="content">
-                            <h2>Welcome</h2>
-                            <p>Introducing the all-new iPhone 16 lineup, where cutting-edge design meets next-level
-                                performance. Whether you're capturing stunning photos,
-                                enjoying enhanced productivity, or exploring immersive experiences, there's an iPhone 16
-                                model tailored to elevate your everyday life.
-                            </p>
-                            <p>Choose a model to learn more and find your perfect match!</p>
-                        </div>
-
-
-                    </div>
+                <div id="content">
+                    <h2>Welcome</h2>
+                    <p>Introducing the all-new iPhone 16 lineup, where cutting-edge design meets next-level
+                        performance. Whether you're capturing stunning photos,
+                        enjoying enhanced productivity, or exploring immersive experiences, there's an iPhone 16
+                        model tailored to elevate your everyday life.
+                    </p>
+                    <p>Choose a model to learn more and find your perfect match!</p>
                 </div>
             </div>
-
         </div>
+    </div>
 
-        <div class="row footer">
-            <img src="img/foot.png" />
-        </div>
+    <div class="container-fluid m-0 p-0">
+        <footer>
+            <p class="text-center m-0" style="color:#e0e8eb; background: rgb(25, 12, 57);">&copy; mainnely.github.io</p>
+        </footer>
     </div>
 
     <script>
         function showContent(model) {
             var content = document.getElementById('content');
-    
+
             if (model === 'iphone16') {
                 content.innerHTML = `
                     <h2 class="model-title">iPhone 16</h2>

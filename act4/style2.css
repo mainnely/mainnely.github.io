@@ -4,14 +4,28 @@
     padding: 0px;
 }
 
-.container-fluid{
-    background: #0D105B;  
-    height:fit-content;
+.banner{
+    background: rgb(25, 12, 57);
+    height: 95vh;
 }
 
-.navi{
-    background: #0D105B;
-    height: 80px
+.nav{
+    background: rgb(25, 12, 57);
+    height: 80px;
+}
+
+.navbar-nav{
+    color: #e0e8eb !important;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.nav-link{
+    color: #e0e8eb !important;
+    text-align: center;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px !important;
 }
 
 .txt-home, .txt-projects, .txt-about{
@@ -44,7 +58,7 @@
 
 .side{
     background-color: #dcdeec;
-    height: 780px;
+    height:92vh;
 }
 
 .side-nav{
@@ -58,10 +72,6 @@
 
 .center{
     height: 780px;
-}
-
-.center img{
-    width:100%;
 }
 
 #content p{
@@ -100,16 +110,4 @@
     text-align: left;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-}
-
-
-.footer img{
-    height: 145px;
-    width: 100%;
-    padding:0px;
-
-}
-.footer{
-    height: 145px;
-    margin: 0px;
 }
