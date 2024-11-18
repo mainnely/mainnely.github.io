@@ -17,10 +17,17 @@
 </head>
 
 <style>
-  body{
+  body {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
   }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
 </style>
 
 
@@ -63,7 +70,7 @@
 
   <div class="container">
     <div class="row mt-5">
-      <div class="col"> 
+      <div class="col">
         <h2 class="display-4">Who is iKON?</h2>
       </div>
     </div>
@@ -71,9 +78,20 @@
       <div class="col">
         <div class="card shadow">
           <div class="card-body">
-            <p class="card-text">iKON is a South Korean boy group under 143 Entertainment, known for their distinct sound and energetic performances. They debuted in 2015 with the hit "My Type" and quickly gained popularity with other chart-toppers like "Dumb & Dumber," "Rhythm Ta," "Love Scenario," and "Killing Me." Their song "Love Scenario" became a massive success, cementing their place in the K-pop scene and gaining attention worldwide. Over the years, individual members have also explored solo activities, with Bobby releasing solo albums like Love and Fall, and some members branching into acting.</p>
-            <p class="card-text">Currently, the group is on hiatus as several members fulfill their mandatory military service. Kim Jinhwan, Bobby, and Jung Chanwoo have enlisted recently, with Song Yunhyeong joining shortly after in August 2024. This break allows the members to complete their duties while promising fans they will reunite in the future to continue making music and performing.</p>
-            <p class="card-text">Kim Hanbin, also known as B.I, was originally the leader of iKON before parting ways with the group. His creative influence remains a significant part of their early successes. Despite the hiatus, the group members have hinted at future projects, keeping fans hopeful for a comeback when their military service concludes.​</p>
+            <p class="card-text">iKON is a South Korean boy group under 143 Entertainment, known for their distinct
+              sound and energetic performances. They debuted in 2015 with the hit "My Type" and quickly gained
+              popularity with other chart-toppers like "Dumb & Dumber," "Rhythm Ta," "Love Scenario," and "Killing Me."
+              Their song "Love Scenario" became a massive success, cementing their place in the K-pop scene and gaining
+              attention worldwide. Over the years, individual members have also explored solo activities, with Bobby
+              releasing solo albums like Love and Fall, and some members branching into acting.</p>
+            <p class="card-text">Currently, the group is on hiatus as several members fulfill their mandatory military
+              service. Kim Jinhwan, Bobby, and Jung Chanwoo have enlisted recently, with Song Yunhyeong joining shortly
+              after in August 2024. This break allows the members to complete their duties while promising fans they
+              will reunite in the future to continue making music and performing.</p>
+            <p class="card-text">Kim Hanbin, also known as B.I, was originally the leader of iKON before parting ways
+              with the group. His creative influence remains a significant part of their early successes. Despite the
+              hiatus, the group members have hinted at future projects, keeping fans hopeful for a comeback when their
+              military service concludes.​</p>
           </div>
         </div>
       </div>
@@ -87,7 +105,7 @@
         <h2 class="display-4">Meet the iKON Members</h2>
       </div>
     </div>
-    <div class="row" id="cardContainer">
+    <div class="row d-flex align-items-center justify-content-center" id="cardContainer">
 
     </div>
   </div>
@@ -136,7 +154,7 @@
     var picsMember = ["img/m1.jpg", "img/m2.jpg", "img/m3.jpg", "img/m4.jpg", "img/m5.jpg", "img/m6.jpg", "img/m7.jpg",]
     for (var i = 0; i < names.length; i++) {
       var myContainer = document.getElementById("cardContainer");
-      myContainer.innerHTML += "<div class=\"col-xl-3 col-md-4 col-sm-6 col-12\"><div class=\"card my-3\" id=\"c" + i + "\" onmouseenter=\"addShadow('c" + i + "')\" onmouseleave=\"removeShadow('c" + i + "')\"><img src=\"" + picsMember[i] + "\" class=\"card-img-top\" style='max-height: 420px'><div class=\"card-body\" style=\"max-height:515px\"><h5 class=\"card-title\">" + names[i] + "</h5>\</div></div></div>";
+      myContainer.innerHTML += "<div class=\"col-xl-3 col-md-4 col-sm-6 col-12\"><div class=\"card my-3 \" id=\"c" + i + "\" onmouseenter=\"addShadow('c" + i + "')\" onmouseleave=\"removeShadow('c" + i + "')\"><img src=\"" + picsMember[i] + "\" class=\"card-img-top\" style='max-height: 420px'><div class=\"card-body\" style=\"max-height:515px\"><h5 class=\"card-title\">" + names[i] + "</h5>\</div></div></div>";
     }
 
     function addShadow(id) {
