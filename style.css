@@ -2,28 +2,29 @@ html {
     scroll-behavior: smooth;
 }
 
-.body{
+body {
     border: 0px;
     margin: 0px;
+    box-sizing: border-box;
     padding: 0px;
     font-family: 'Poppins', serif !important;
     font-weight: 400;
     font-style: normal;
 }
 
-.nav{
+.nav {
     background: rgb(25, 12, 57);
     height: 80px;
 }
 
-.navbar-nav{
+.navbar-nav {
     color: #e0e8eb !important;
     text-align: center;
     font-weight: bold;
     margin-top: 25px;
 }
 
-.nav-link{
+.nav-link {
     color: #e0e8eb !important;
     text-align: center;
     font-weight: bold;
@@ -31,21 +32,84 @@ html {
 }
 
 .navbar-collapse.show .navbar-nav .nav-link {
-    color:  rgb(25, 12, 57) !important;
-  }
-
-
-.content{
-    height: 703px;
-    justify-content: space-between;
-    padding-left: 50px;
+    color: rgb(25, 12, 57) !important;
 }
 
-.card-info{
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    display:flex;
+    align-items: center;
+    gap: 20px;
 }
 
-.col{
-    padding: 12px;
+.timelineEvent {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 1s ease-in-out;
+    width: 200px;
+}
+
+.timelineEventType1 {
+    border-left: 5px solid #9251ac;
+}
+
+.timelineEventType2 {
+    border-left: 5px solid #555ac0;
+}
+
+.timelineEventType3 {
+    border-left: 5px solid #24b47e;
+}
+
+.timelineEventType4 {
+    border-left: 5px solid #ff81cb;
+}
+
+.timelineEventIcon {
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.timelineEventDate {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.timelineEventContent {
+    flex: start;
+}
+
+.timelineEventTitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    justify-content: start;
+}
+
+.timelineEventDescription {
+    font-size: 1rem;
+    color: #555;
+}
+
+.timelineEventDescription p {
+    justify-content: start;
+}
+
+.timelineEvent:hover {
+    transform: translateY(-10px);
 }
