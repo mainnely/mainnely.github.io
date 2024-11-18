@@ -68,19 +68,19 @@ h2 {
 }
 
 .timelineEventType1 {
-    border-left: 5px solid #9251ac;
+    border-left: 15px solid #170955;
 }
 
 .timelineEventType2 {
-    border-left: 5px solid #555ac0;
+    border-left: 15px solid #2b197e;
 }
 
 .timelineEventType3 {
-    border-left: 5px solid #24b47e;
+    border-left: 15px solid #503ab4;
 }
 
 .timelineEventType4 {
-    border-left: 5px solid #ff81cb;
+    border-left: 15px solid #7a64df;
 }
 
 .timelineEventIcon {
