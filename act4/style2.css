@@ -1,7 +1,16 @@
-.body{
+body, p{
     border: 0px;
     margin: 0px;
     padding: 0px;
+    font-family: 'Poppins', serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2{
+    font-family: 'Poppins', serif !important;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .banner{
