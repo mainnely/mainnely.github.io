@@ -7,7 +7,6 @@
     <title>Sydney Opera House</title>
     <link rel="stylesheet" href="style3.css">
     <link rel="icon" href="img/Logo.png">
-
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,27 +14,33 @@
 </head>
 
 <body>
-    <div class="container-fluid banner">
-        <div class="container-fluid containerNav">
-            <div class="row nav-bar py-3">
-                <div class="col-3 nav-logo" style="padding-left: 50px;">
-                    <img src="img/Group 5.png" />
-                </div>
-                <div class="col-9 nav-content d-flex justify-content-between">
-                    <div class="col-3 txt my-3">
-                    </div>
-                    <div class="col-3 txtHome my-3">
-                        <a class="homeBtn" href="../">HOME</a>
-                    </div>
-                    <div class="col-3 txtProjects my-3">
-                        PROJECTS
-                    </div>
-                    <div class="col-3 txtAbout my-3">
-                        ABOUT
+    <div class="container-fluid banner p-0">
+        <nav class="navbar navbar-expand-lg shadow-lg p-0" style="background-color: transparent !important;">
+            <div class="container-fluid nav">
+                <img src="img/Group 5.png" style="margin: 5px 0px 5px 15px;" />
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon shadow"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="ms-auto">
+                        <ul class="navbar-nav pb-4">
+                            <li class="nav-item">
+                                <a class="nav-link navHome" aria-current="page" href="#home">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navProjects" href="#projects">PROJECTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link navAbout" href="#about">ABOUT</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </nav>
+        
+        
         <div class="container-fluid containerTitle">
             <div class="row introTitle">
                 <div class="col-12">
@@ -48,10 +53,10 @@
                 </div>
             </div>
         </div>
-        <div class="containerIntroContent">
-            <div class="row introContent">
-                <div class="col-12">
-                    <p class="contentTxt py-4 pb-2 text-justify text-brea">
+        <!-- <div class="containerIntroContent" -->
+            <div class="row introContent m-0">
+                <div class="col-10 col-sm-12 col-md-10 px-0 colContent">
+                    <p class="contentTxt text-center text-break">
                         Discover the iconic Sydney Opera House, a UNESCO World Heritage site and a symbol of Australia’s
                         cultural vibrancy. Nestled on the edge of Sydney Harbour, this architectural marvel features its
                         distinct sail-like design, offering stunning views and a breathtaking backdrop. Home to
@@ -66,7 +71,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     </div>
 
     <div class="container-fluid picSlide">

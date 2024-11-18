@@ -1,15 +1,30 @@
 .banner {
     background-image: url("img/sydney_bg.png");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size:cover;
     min-height: 100vh;
 }
 
-.nav-content {
-    color: aliceblue;
+@media (max-width: 768px) {
+    .element {
+      background-position: center center; 
+      background-size: cover;            
+    }
+  }
+
+.navbar-nav {
+    color: #e0e8eb !important;
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    margin-top: 25px;
+}
+
+.nav-link {
+    color: #e0e8eb !important;
+    text-align: center;
+    font-weight: bold;
+    padding: 0px 10px 0px 10px !important;
 }
 
 .txtHome,
@@ -30,10 +45,10 @@
 
 .introContent {
     color: aliceblue;
-    max-height: 230px;
-    min-height: 230px;
+    /* max-height: 230px;
+    min-height: 230px; */
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     text-align: center;
     font-family: 'poppins';
@@ -53,14 +68,62 @@
 
 .contentTxt {
     font-size: 19px;
-    max-height: 200px;
+    max-height: 230px;
     min-height: 200px;
     overflow: auto;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     text-align: center;
     margin: 0 auto;
+}
+
+.colContent{
+    padding-top: 55px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 880px) {
+    .contentTxt {
+        font-size: 16px;
+    }
+    .introTitle{
+        margin-bottom: 55px;
+    }
+    .colContent{
+        padding-top: 32 !important;
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 670px) {
+    .contentTxt {
+        font-size: 14px;
+    }
+    .introTitle{
+        margin-bottom: 45px;
+    }
+    .colContent{
+        padding-top: 32 !important;
+        margin-bottom: 25px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .contentTxt {
+        font-size: 12px;
+    }
+    .introTitle{
+        margin-bottom: 40px;
+    }
+    .colContent{
+        padding-top: 24 !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+.contentTxt::-webkit-scrollbar {
+    display: none;
 }
 
 
