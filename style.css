@@ -1,11 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .body{
     border: 0px;
     margin: 0px;
     padding: 0px;
-}
-.banner{
-    background: rgb(25, 12, 57);  
-    height:100vh;
+    font-family: 'Poppins', serif !important;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .nav{
@@ -27,6 +30,10 @@
     padding: 0px 10px 0px 10px !important;
 }
 
+.navbar-collapse.show .navbar-nav .nav-link {
+    color:  rgb(25, 12, 57) !important;
+  }
+
 
 .content{
     height: 703px;
@@ -41,15 +48,4 @@
 
 .col{
     padding: 12px;
-}
-
-.footer img{
-    height: 145px;
-    width: 100%;
-    padding:0px;
-
-}
-.footer{
-    height: 145px;
-    margin: 0px;
 }
