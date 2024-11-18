@@ -33,8 +33,14 @@ body {
 
 .navbar-collapse.show .navbar-nav .nav-link {
     color: rgb(25, 12, 57) !important;
+    
 }
 
+@media (max-width: 770px) {
+    .imgContainer {
+      padding-top: 100px;
+    }
+}
 
 h2 {
     text-align: center;
