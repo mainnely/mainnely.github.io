@@ -40,6 +40,9 @@ body {
     .imgContainer {
       padding-top: 100px;
     }
+    .descIntro {
+        margin-bottom: 24px;;
+    }
 }
 
 h2 {
