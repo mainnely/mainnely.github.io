@@ -1,4 +1,9 @@
-body, p{
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+p {
     border: 0px;
     margin: 0px;
     padding: 0px;
@@ -7,37 +12,39 @@ body, p{
     font-style: normal;
 }
 
-h2{
+h2 {
     font-family: 'Poppins', serif !important;
     font-weight: 400;
     font-style: normal;
 }
 
-.banner{
+.banner {
     background: rgb(25, 12, 57);
     height: 95vh;
 }
 
-.nav{
+.nav {
     background: rgb(25, 12, 57);
     height: 80px;
 }
 
-.navbar-nav{
+.navbar-nav {
     color: #e0e8eb !important;
     text-align: center;
     font-weight: bold;
     margin-top: 25px;
 }
 
-.nav-link{
+.nav-link {
     color: #e0e8eb !important;
     text-align: center;
     font-weight: bold;
     padding: 0px 10px 0px 10px !important;
 }
 
-.txt-home, .txt-projects, .txt-about{
+.txt-home,
+.txt-projects,
+.txt-about {
     color: #A9D6E5;
     text-align: center;
     font-weight: bold;
@@ -45,78 +52,100 @@ h2{
     cursor: pointer;
 }
 
-.logo img{
+.logo img {
     margin-top: 5px;
     margin-left: 12px;
 }
 
-.content{
+.content {
     height: 703px;
     justify-content: space-between;
     padding-left: 50px;
 }
 
-.card-info{
+.card-info {
     justify-content: center;
-    display:flex;
+    display: flex;
 }
 
-.row{
-    padding:0px;
+.row {
+    padding: 0px;
 }
 
-.side{
+.side {
     background-color: #dcdeec;
-    height:92vh;
+    height: 92vh;
 }
 
-.side-nav{
+.side-nav {
     background-color: #d2d4e5;
 }
 
-.nav{
+.nav {
     justify-content: space-evenly;
     margin-top: 5px;
 }
 
-.center{
+.center {
     height: 780px;
 }
 
-#content p{
+#content p {
     margin: 10px 30px;
     font-size: 18px;
     color: #312f2f;
     text-align: left;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#content h2{
+#content h2 {
     font-size: 30px;
     color: #030419;
     margin: 50px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .model-title {
-    font-size: 30px;
+    font-size: 28px;
     color: #030419;
     margin: 50px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.feature p{
+.feature p {
     font-size: 16px;
     color: #312f2f;
     text-align: left;
     margin: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .price {
     font-size: 18px;
     color: #312f2f;
     text-align: left;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+@media only screen and (max-width: 850px) {
+    .ipImg {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+
+    .feature {
+        font-size: 14px !important;
+    }
+
+    .model-title {
+        font-size: 26px !important;
+    }
+
+    .price p {
+        font-size: 16px !important;
+    }
+
+}
+
+@media only screen and (max-width: 770px) {
+
+    footer {
+        display: none;
+    }
 }
