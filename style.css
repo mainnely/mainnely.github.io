@@ -36,6 +36,11 @@ body {
     
 }
 
+.navbar-toggler-icon {
+    background-color: transparent;
+    filter: invert(1) grayscale(100%) brightness(100%);
+}
+
 @media (max-width: 770px) {
     .imgContainer {
       padding-top: 100px;
