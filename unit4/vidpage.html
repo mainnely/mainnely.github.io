@@ -16,6 +16,10 @@
 </head>
 
 <style>
+    body {
+        overflow-x: hidden;
+    }
+
     .bgVideoContainer {
         position: relative;
         width: 100%;
@@ -120,7 +124,7 @@
     </div>
 
     <div class="container-fluid groupMV p-0">
-        <div class="row">
+        <div class="col p-0">
             <div class="display-3 m-4" style="margin-left: auto;">
                 iKON Hit Songs
             </div>
@@ -180,7 +184,7 @@
     </div>
 
     <div class="container-fluid soloMV p-0">
-        <div class="row">
+        <div class="col p-0">
             <div class="display-3 m-4" style="margin-left: auto;">
                 iKON Solo Songs
             </div>
@@ -284,20 +288,20 @@
                 Listen to iKON's top tracks!
             </div>
         </div>
-        <div class="row mx-5 px-5">
-            <iframe style="border-radius:12px"
+        <div class="row d-flex justify-content-center">
+            <iframe style="border-radius:12px; width: 100%; max-width: 70%; height: 600px;"
                 src="https://open.spotify.com/embed/artist/5qRSs6mvI17zrkJpOHkCoM?utm_source=generator&theme=0"
-                width="100%" height="600" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </div>
     </div>
+    
 
-
-    <div class="container-fluid m-5">
-        <div class="row mt-5">
-            <div class="col">
-                <h1 class="display-3">
+    <div class="container my-5 mx-0 p-0">
+        <div class="row my-3 mx-3">
+            <div class="col m-0 p-0">
+                <h1 class="display-3 m-0 px-5">
                     Connect with iKON
                     <button type="button" onclick="expandContent()" class="btn btn-outline-secondary"
                         id="btnExpand">Learn
