@@ -50,14 +50,14 @@ body {
     }
 }
 
-/* @media (max-width: 430px) {
+@media (max-width: 430px) {
     .imgContainer {
       padding-top: 100px;
     }
     .descIntro {
         margin-bottom: 34px;
     }
-} */
+}
 
 .auto-type {
     color: rgb(37, 18, 87) !important;
