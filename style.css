@@ -46,9 +46,15 @@ body {
       padding-top: 100px;
     }
     .descIntro {
-        margin-bottom: 26px;;
+        margin-bottom: 28px;;
     }
 }
+
+.auto-type {
+    color: rgb(37, 18, 87) !important;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 h2 {
     text-align: center;
