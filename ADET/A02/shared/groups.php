@@ -25,7 +25,7 @@
                 style="float:left; max-width: 500px; max-height: 600px;" alt="iKON">
             <div class="display-2 fw-bold mx-4 px-4">iKON</div>
             <div class="display-6 my-4 ">
-                Debut: September 15, 2025 <br>
+                Debut: September 15, 2015 <br>
                 Debut Song: My Type <br>
             </div>
             <div class="linkToMembers pt-4"><a href="?page=members#ikonMembers"
