@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Treasure</title>
+    <link rel="icon" href="resources/icon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<style>
+    @media (max-width: 1024px) {
+  .albumCover {
+    height: 300px !important;
+  }
+
+  .lyricCard {
+    height: 410px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .display-4 {
+    font-size: 2.1rem;
+    margin-top: 0 !important;
+  }
+}
+
+
+    @media (max-width: 990px) {
+        .albumCover {
+            object-fit: contain !important;
+        }
+    }
+</style>
+
+<body data-bs-theme="light">
+    <div class="container-fluid mx-0 mt-2 mb-0" style="height: 100vh;">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 mb-3">
+                <div class="card shadow-5"
+                    style="background-color: #fff9db; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <img src="resources/Screenshot (2630).png" class="card-img-top img-fluid"
+                        style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3  mb-3">
+                <div class="card shadow-5"
+                    style="background-color: #fff3b0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <img src="resources/Screenshot (2634).png" class="card-img-top img-fluid"
+                        style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 mb-3">
+                <div class="card shadow-5"
+                    style="background-color: #ffef9f; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <img src="resources/right.jfif" class="card-img-top img-fluid"
+                        style="height: 200px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-12 col-md-4 col-lg-3 mb-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-5"
+                            style="background-color: #fef9c7; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <video class="Video card-img-top" autoplay muted loop
+                                style="height: 720px !important; object-fit: cover;">
+                                <source src="resources/mv.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-8 col-lg-6 mb-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow-5"
+                            style="background-color: #fef6b1; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <img src="resources/center.jpg" class="card-img-top img-fluid"
+                                style="height: 360px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="card shadow-5"
+                            style="background-color: #fcf4a3; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                            <iframe style="border-radius:12px"
+                                src="https://open.spotify.com/embed/album/4Ek59vEmWeKZTWgFbWNZlL?utm_source=generator"
+                                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-3 mb-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="card lyricCard shadow-5 p-5"
+                            style="background-color: #f8f1a0; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+
+                            <div class="display-4 text-center fw-bold mt-3" style="color: #000000;">
+                                TRACKS LYRICS
+                            </div>
+
+                            <div class="btn btn-light mx-auto "
+                                style="width: 150px; height: 50px; font-size: 20px; border-radius: 25px; color: black; margin-top: 20px;">
+                                <a href="lyrics.html" style="text-decoration:none; color:#000000">View All</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col pe-0">
+                            <div class="card shadow-5"
+                                style="background-color: #fffacd; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                                <img src="resources/cover.jpg" class="card-img-top albumCover img-fluid"
+                                    style="height: 390px; width: 100%; object-fit: cover; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous">
+            </script>
+</body>
+
+</html>
