@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TREASURE ALBUM POS</title>
+    <link rel="icon" href="../A03/resources/icon.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<style>
+    .custom-button {
+        width: 200px;
+        justify-content: center;
+    }
+
+    .custom-button.content {
+        width: 300px;
+    }
+
+    .custom-button:hover {
+        background-color: rgb(240, 240, 240);
+        cursor: pointer;
+    }
+
+    .topcontainer {
+        height: 15dvh;
+    }
+
+    .categories {
+        width: fit-content;
+    }
+
+    .maincontainer {
+        height: 70dvh;
+    }
+
+    .hide-scrollbar {
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+    .custom-button.content {
+        width: 100%;
+    }
+    .categoriesBtn {
+        width: 200px;
+        height: 60px;
+    }
+}
+
+</style>
+
+</style>
+
+<body style="background-color: #f7f7f7;">
+    <div class="container-fluid">
+        <div class="row" style="background-color: black; max-height: 10vh; position: fixed; width: 100vw;">
+            <div class="col-2 d-flex justify-content-center">
+                <img src="../A03/resources/icon.jpg" alt="Logo" class="img-fluid p-0"
+                    style="max-height: 10vh; max-width: 10vh;">
+            </div>
+            <div class="col-10 d-flex align-items-center">
+                <div class="display-5 text-white ">
+                    <b>Treasure Album POS</b>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 110px">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col pb-3">
+                        <div class="card hide-scrollbar p-2 topcontainer shadow-lg rounded-5">
+                            <div class="d-flex justify-content-center align-items-center flex-row categories"
+                                id="categories">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card hide-scrollbar p-3 maincontainer shadow-lg rounded-5">
+                            <div class="d-flex align-self-center flex-row flex-wrap" id="maincontainer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card p-3 hide-scrollbar shadow-lg rounded-5" style="height: 100%;">
+                    <div id="receipt">
+                    </div>
+                    <div class="mt-4 d-flex flex-row justify-content-between" style="border-top: 1px solid #ccc; padding-top: 10px;">
+                        <div><b>TOTAL</b></div>
+                        <div><b id="totalValue">0</b></div>
+                    </div>
+                    <div class="mt-3 d-flex justify-content-end">
+                        <button onclick="clearReceipt()" class="btn btn-danger">Clear</button>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var products = [
+            {
+                category: "Single Albums",
+                albums: [
+                    {
+                        title: "THE FIRST STEP : CHAPTER ONE",
+                        release_date: "2020-08-07",
+                        versions: [
+                            {
+                                version: "White",
+                                code: "TFSCO-WHT",
+                                price_php: 855,
+                                image: "img/FirstStepC1White.jpg"
+                            },
+                            {
+                                version: "Black",
+                                code: "TFSCO-BLK",
+                                price_php: 855,
+                                image: "img/FirstStepC1Black.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        title: "THE FIRST STEP : CHAPTER TWO",
+                        release_date: "2020-09-18",
+                        versions: [
+                            {
+                                version: "White",
+                                code: "TFSC2-WHT",
+                                price_php: 800,
+                                image: "https://lightupk.com/cdn/shop/products/1_d73a3c93-b688-4170-b510-69a218b3e023.png?v=1654062415&width=600"
+                            },
+                            {
+                                version: "Black",
+                                code: "TFSC2-BLK",
+                                price_php: 800,
+                                image: "https://lightupk.com/cdn/shop/products/2_08604065-7698-4061-a217-602a699f0624.png?v=1654062420&width=600"
+                            }
+                        ]
+                    },
+                    {
+                        title: "THE FIRST STEP : CHAPTER THREE",
+                        release_date: "2020-11-06",
+                        versions: [
+                            {
+                                version: "White",
+                                code: "TFSC3-WHT",
+                                price_php: 800,
+                                image: "https://cafe24img.poxo.com/ygnext/web/product/extra/small/202010/5f368404b8156b50bd845293649113fe.png"
+                            },
+                            {
+                                version: "Black",
+                                code: "TFSC3-BLK",
+                                price_php: 800,
+                                image: "https://cafe24img.poxo.com/ygnext/web/product/extra/small/202010/8c1cebf075868f388c816e42e0235270.png"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Mini Albums [EP]",
+                albums: [
+                    {
+                        title: "THE SECOND STEP : CHAPTER ONE",
+                        release_date: "2022-02-15",
+                        versions: [
+                            {
+                                version: "Photobook Blue",
+                                code: "TSSC1-PBBLU",
+                                price_php: 1155,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1644204064169-CNIU5M470TY940NQ1CPB/product.31249.164386613784365.jpg?format=500w"
+                            },
+                            {
+                                version: "Photobook Green",
+                                code: "TSSC1-PBGRN",
+                                price_php: 1155,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1644203970261-YP563JOGH5VBCUR1DR12/product.31250.164386613158219.jpg?format=500w"
+                            },
+                            {
+                                version: "Digipack",
+                                code: "TSSC1-DPK",
+                                price_php: 755,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1641895310309-E4UL8HVFETT5J0XY03I1/product.31248.164187886721272.jpg?format=500w"
+                            },
+                            {
+                                version: "KiT",
+                                code: "TSSC1-KIT",
+                                price_php: 999,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1644204137970-JM8D3LUXY9DQ7JEVOYGP/product.31247.164386695129458.png?format=500w"
+                            }
+                        ]
+                    },
+                    {
+                        title: "THE SECOND STEP : CHAPTER TWO",
+                        release_date: "2022-04-04",
+                        versions: [
+                            {
+                                version: "Photobook Deep Blue",
+                                code: "TSSC2-PBDB",
+                                price_php: 855,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1662093296801-E30PM9285GABSRM79V2A/3cb61d5a02edad65c08d02cdb546854f.jpg?format=1500w"
+                            },
+                            {
+                                version: "Photobook Light Green",
+                                code: "TSSC2-PBLG",
+                                price_php: 855,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1662093296801-E30PM9285GABSRM79V2A/3cb61d5a02edad65c08d02cdb546854f.jpg?format=1500w"
+                            },
+                            {
+                                version: "Digipack",
+                                code: "TSSC2-DPK",
+                                price_php: 688,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1664527244813-FHV91QSSIFAKGQ9Q5MTA/product.33667.166451569793143.png?format=500w"
+                            },
+                            {
+                                version: "YG TAG",
+                                code: "TSSC2-YGTAG",
+                                price_php: 799,
+                                image: "https://images.squarespace-cdn.com/content/v1/5c3398ebaa49a1b1f53eabdf/1664527129895-02CVB9FGFW25XXZL742Z/product.33621.166451362018114.jpg?format=500w"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Special Mini Albums",
+                albums: [
+                    {
+                        title: "PLEASURE",
+                        release_date: "2025-03-17",
+                        versions: [
+                            {
+                                version: "Yellow",
+                                code: "PLSR-YLW",
+                                price_php: 879,
+                                image: "https://www.kpopalbums.com/cdn/shop/files/b2e4a6deacb21a859f217360e88623ae216e4a0710cd09ce234379f165dbe27f.jpg?v=1742181615"
+                            },
+                            {
+                                version: "Green",
+                                code: "PLSR-GRN",
+                                price_php: 799,
+                                image: "https://www.kpopalbums.com/cdn/shop/files/2a179d5fa0d9b34a7875c8d5fdcfaa4319058ed31c22cd684ad01dec8eabe3d3.jpg?v=1742544917"
+                            },
+                            {
+                                version: "Blue",
+                                code: "PLSR-BLU",
+                                price_php: 799,
+                                image: "https://www.kpopalbums.com/cdn/shop/files/6c2c0c145a010d2a44f46a48c014f1a37d243f78fe99955efbd9bfc84a5903b0_fefd98a9-a968-4112-8086-6ad7d3d8e734.jpg?v=1743676751"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                category: "Full Albums",
+                albums: [
+                    {
+                        title: "THE FIRST STEP : TREASURE EFFECT",
+                        release_date: "2021-01-11",
+                        versions: [
+                            {
+                                version: "Blue",
+                                code: "TFSTE-B",
+                                price_php: 950,
+                                image: "https://img.imageimg.net/artist/treasure/img/product_1032393.jpg"
+                            },
+                            {
+                                version: "Green",
+                                code: "TFSTE-G",
+                                price_php: 1100,
+                                image: "https://img.imageimg.net/artist/treasure/img/product_1032395.png"
+                            },
+                            {
+                                version: "Orange",
+                                code: "TFSTE-O",
+                                price_php: 1200,
+                                image: "https://img.imageimg.net/artist/treasure/img/product_1032394.png"
+                            }
+                        ]
+                    },
+                    {
+                        title: "REBOOT",
+                        release_date: "2023-07-28",
+                        versions: [
+                            {
+                                version: "Photobook Version 1",
+                                code: "RBT-PB1",
+                                price_php: 1000,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/3816c9e4d9281cbce1c9f77394915244d951615f0cec01d3cbafe0aed91df5fa.jpg?v=1690783756"
+                            },
+                            {
+                                version: "Photobook Version 2",
+                                code: "RBT-PB2",
+                                price_php: 1000,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/0853ed57f3c0df7f57953375462b9284dfa63bf18fddd37e6db089d12928a44b.jpg?v=1690783762"
+                            },
+                            {
+                                version: "Photobook Version 3",
+                                code: "RBT-PB3",
+                                price_php: 1000,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/0aa40395fbc59390da627c75cbbc4ac38e5a1c6d7971b37ffbb8db51dbf57f26.jpg?v=1690783768"
+                            },
+                            {
+                                version: "YG TAG White Version",
+                                code: "RBT-YGTW",
+                                price_php: 600,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/7996f55c2f6944f6506855171575ee8324da6dc1346a3bd24103f17eed3e2c02.jpg?v=1690783744"
+                            },
+                            {
+                                version: "YG TAG Onyx Version",
+                                code: "RBT-YGTO",
+                                price_php: 600,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/788e5ff7c9c7a42ad3b6a9ad581af13ca163fc062e3c81303d6b5749e266afa2.jpg?v=1690783733"
+                            },
+                            {
+                                version: "YG TAG Red Version",
+                                code: "RBT-YGTR",
+                                price_php: 600,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/4950682fe9f5fa91484707fae332a78be4b37d251ae84b280e60919da038b383.jpg?v=1690783780"
+                            },
+                            {
+                                version: "YG TAG Gray Version",
+                                code: "RBT-YGTG",
+                                price_php: 600,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/7b37757be9cdc04c7420aa46b374a6d2257f272b9ba10d638a1c3d155b96c2d5.jpg?v=1690783738"
+                            },
+                            {
+                                version: "Digipack",
+                                code: "RBT-DPK",
+                                price_php: 680,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/c08bf274944ed50b256520e983bc2aa590671488b13c2358a7730ffc4bc86565.jpg?v=1689067835"
+                            },
+                            {
+                                version: "Khino Kit",
+                                code: "RBT-KHKIT",
+                                price_php: 900,
+                                image: "https://www.kpopalbums.com/cdn/shop/products/26f15c58ab000777860862dd694c6a292f3e54a718d513c656fef81110ca1dd4.jpg?v=1690721444"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+
+        var total = 0;
+
+        function loadCategories() {
+            var categoriesContainer = document.getElementById("categories");
+
+            products.forEach(function (product, index) {
+                categoriesContainer.innerHTML += `
+      <div onclick="loadProducts(` + index + `)" class="card categoriesBtn mx-1 custom-button p-4 text-center rounded-5" style="max-height: 120px; min-height: 100px;">
+        <small>` + product.category + `</small>
+      </div>
+    `;
+            });
+        }
+
+        function loadProducts(categoryIndex) {
+            var mainContainer = document.getElementById("maincontainer");
+            mainContainer.innerHTML = "";
+
+            products[categoryIndex].albums.forEach(function (album) {
+                album.versions.forEach(function (version) {
+                    mainContainer.innerHTML += `
+        <div onclick="addToReceipt(` + version.price_php + `, '` + version.code + `')" class="card mx-1 my-2 custom-button content p-3 text-center">
+          <img src="` + version.image + `" alt="` + version.version + `" class="img-fluid mb-2" style="max-height: 200px; object-fit: contain;">
+          <small>` + album.title + ' - ' + version.version + `</small><br>
+          <small>Price: ₱` + version.price_php + `</small>
+        </div>
+      `;
+                });
+            });
+        }
+
+        function addToReceipt(price, code) {
+            var receiptContainer = document.getElementById("receipt");
+            total = parseFloat(total) + parseFloat(price);
+
+            var totalValueElement = document.getElementById("totalValue");
+            totalValueElement.innerHTML = "₱" + total.toFixed(2);
+
+            receiptContainer.innerHTML += `
+      <div class="d-flex flex-row justify-content-between">
+      <div><small>` + code + `</small></div>
+      <div><small>₱` + price + `</small></div>
+      </div>
+     `;
+        }
+
+        function clearReceipt() {
+    document.getElementById("receipt").innerHTML = "";
+    total = 0;
+    document.getElementById("totalValue").innerHTML = "₱0.00";
+}
+
+        loadCategories();
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
